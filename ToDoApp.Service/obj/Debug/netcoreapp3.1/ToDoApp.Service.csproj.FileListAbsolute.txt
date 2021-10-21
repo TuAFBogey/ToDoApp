@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\bin\Debug\netcoreapp3.1\ToDoApp.Service.deps.json
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\bin\Debug\netcoreapp3.1\ToDoApp.Service.dll
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\bin\Debug\netcoreapp3.1\ToDoApp.Service.pdb
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\bin\Debug\netcoreapp3.1\ToDoApp.Core.dll
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\bin\Debug\netcoreapp3.1\ToDoApp.Data.dll
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\bin\Debug\netcoreapp3.1\ToDoApp.Core.pdb
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\bin\Debug\netcoreapp3.1\ToDoApp.Data.pdb
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\obj\Debug\netcoreapp3.1\ToDoApp.Service.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\obj\Debug\netcoreapp3.1\ToDoApp.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\obj\Debug\netcoreapp3.1\ToDoApp.Service.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\obj\Debug\netcoreapp3.1\ToDoApp.Service.AssemblyInfo.cs
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\obj\Debug\netcoreapp3.1\ToDoApp.Service.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\obj\Debug\netcoreapp3.1\ToDoApp.Service.csproj.CopyComplete
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\obj\Debug\netcoreapp3.1\ToDoApp.Service.dll
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Service\obj\Debug\netcoreapp3.1\ToDoApp.Service.pdb

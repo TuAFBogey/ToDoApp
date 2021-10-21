@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\bin\Debug\netcoreapp3.1\ToDoApp.Core.deps.json
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\bin\Debug\netcoreapp3.1\ToDoApp.Core.dll
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\bin\Debug\netcoreapp3.1\ToDoApp.Core.pdb
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.AssemblyInfo.cs
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.dll
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.pdb
