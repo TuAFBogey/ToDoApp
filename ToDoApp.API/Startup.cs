@@ -15,6 +15,14 @@ using ToDoApp.Data.UnitOfWorks;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ToDoApp.Core.Repositories;
+using ToDoApp.Data.Repositories;
+
+using ToDoApp.Service.Services;
+using ToDoApp.Core.Services;
+
+
+
 
 namespace ToDoApp.API
 {
@@ -30,9 +38,12 @@ namespace ToDoApp.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(Startup));
 
-            services.AddRouting();
-
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IService<>), typeof(Service.Services.Service<>));
+            services.AddScoped<IToDoListService, ToDoListService>();
+            
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddDbContext<AppDbContext>(options =>
@@ -43,8 +54,24 @@ namespace ToDoApp.API
                 });
             });
 
+
+            services.AddSwaggerDocument(config =>
+            {
+                config.PostProcess = (doc =>
+                {
+                    doc.Info.Title = "New Employee Finder API";
+                    doc.Info.Version = "1.0";
+                    doc.Info.Contact = new NSwag.OpenApiContact()
+                    {
+                        Name = "Hayrullah Uður Güvenen",
+                        Url = "https://www.linkedin.com/in/guvenenugur/",
+                        Email = "uguvenen@gmail.com"
+                    };
+                });
+            });
+
+
             services.AddControllers();
-            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,23 +81,29 @@ namespace ToDoApp.API
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
+
+
+            app.UseOpenApi();
+
+
+
+            app.UseSwaggerUi3();
+
+
+            app.UseStaticFiles();
+
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }
