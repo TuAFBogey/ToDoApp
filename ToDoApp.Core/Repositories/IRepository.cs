@@ -12,19 +12,9 @@ namespace ToDoApp.Core.Repositories
 
         Task<IEnumerable<TEntity>> GetAllAsync();
 
-        // x=>x.Id
-        Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate); //Func delege predicate delegesi ???
-
-        // x=>x.Name
-        Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate);
-
         Task AddAsync(TEntity entity);
 
-        Task AddRangeAsync(IEnumerable<TEntity> entities);
-
         void Remove(TEntity entity);
-
-        void RemoveRange(TEntity entities);
 
         TEntity Update(TEntity entity);
     }

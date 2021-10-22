@@ -26,16 +26,6 @@ namespace ToDoApp.Data.Repositories
             await _DbSet.AddAsync(entity);
         }
 
-        public async Task AddRangeAsync(IEnumerable<TEntity> entities)
-        {
-            await _DbSet.AddRangeAsync(entities);
-        }
-
-        public async Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate)
-        {
-            return await _DbSet.Where(predicate).ToListAsync();
-        }
-
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await _DbSet.ToListAsync();
@@ -49,16 +39,6 @@ namespace ToDoApp.Data.Repositories
         public void Remove(TEntity entity)
         {
             _DbSet.Remove(entity);
-        }
-
-        public void RemoveRange(TEntity entities)
-        {
-            _DbSet.RemoveRange(entities);
-        }
-
-        public async Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
-        {
-            return await _DbSet.SingleOrDefaultAsync(predicate);
         }
 
         public TEntity Update(TEntity entity)

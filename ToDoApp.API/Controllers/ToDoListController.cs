@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ToDoApp.API.DTOs;
+using ToDoApp.Core.Enums;
 using ToDoApp.Core.Models;
 using ToDoApp.Core.Services;
 
@@ -33,29 +34,29 @@ namespace ToDoApp.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var employee = await _toDoListService.GetByIdAsync(id);
-            return Ok(_mapper.Map<ToDoListDTO>(employee));
+            var toDoList = await _toDoListService.GetByIdAsync(id);
+            return Ok(_mapper.Map<ToDoListDTO>(toDoList));
         }
 
         [HttpPost]
-        public async Task<IActionResult> Save(ToDoListDTO employeeDto)
+        public async Task<IActionResult> Save(ToDoListDTO toDoListDto)
         {
-            var newEmployee = await _toDoListService.AddAsync(_mapper.Map<ToDoList>(employeeDto));
-            return Created(string.Empty, _mapper.Map<ToDoListDTO>(newEmployee));
+            var newToDoList = await _toDoListService.AddAsync(_mapper.Map<ToDoList>(toDoListDto));
+            return Created(string.Empty, _mapper.Map<ToDoListDTO>(newToDoList));
         }
 
         [HttpPut]
-        public IActionResult Update(ToDoListDTO employeeDto)
+        public IActionResult Update(ToDoListDTO toDoListDto)
         {
-            var employee = _toDoListService.Update(_mapper.Map<ToDoList>(employeeDto));
+            var toDoLists = _toDoListService.Update(_mapper.Map<ToDoList>(toDoListDto));
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Remove(int id)
         {
-            var employee = await _toDoListService.GetByIdAsync(id);
-            _toDoListService.Remove(employee);
+            var toDoList = await _toDoListService.GetByIdAsync(id);
+            _toDoListService.Remove(toDoList);
             return NoContent();
         }
     }

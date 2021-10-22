@@ -28,13 +28,6 @@ namespace ToDoApp.Service.Services
             return entity;
         }
 
-        public async Task<IEnumerable<TEntity>> AddRangeAsync(IEnumerable<TEntity> entities)
-        {
-            await _repository.AddRangeAsync(entities);
-            await _unitOfWork.CommitAsync();
-            return entities;
-        }
-
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await _repository.GetAllAsync();
@@ -50,28 +43,11 @@ namespace ToDoApp.Service.Services
             _repository.Remove(entity);
             _unitOfWork.Commit();
         }
-
-        public void RemoveRange(TEntity entities)
-        {
-            _repository.RemoveRange(entities);
-            _unitOfWork.Commit();
-        }
-
-        public async Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
-        {
-            return await _repository.SingleOrDefaultAsync(predicate);
-        }
-
         public TEntity Update(TEntity entity)
         {
             TEntity updateEntity = _repository.Update(entity);
             _unitOfWork.Commit();
             return updateEntity;
-        }
-
-        public async Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate)
-        {
-            return await _repository.Where(predicate);
         }
     }
 }

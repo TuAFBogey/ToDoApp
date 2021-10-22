@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
+using ToDoApp.Core.Enums;
 using ToDoApp.Core.Models;
 using ToDoApp.Core.Repositories;
 
@@ -12,6 +15,5 @@ namespace ToDoApp.Data.Repositories
         public ToDoListRepository(AppDbContext context) : base(context)
         {
         }
-
     }
 }

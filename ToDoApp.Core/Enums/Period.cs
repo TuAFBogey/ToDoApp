@@ -8,6 +8,6 @@ namespace ToDoApp.Core.Enums
     {
         Daily = 1,
         Weekly = 2,
-        Monthl = 3
+        Monthly = 3
     }
 }

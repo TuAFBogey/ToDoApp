@@ -11,8 +11,8 @@ namespace ToDoApp.Data.UnitOfWorks
     public class UnitOfWork : IUnitOfWork
     {
         private readonly AppDbContext _context;
-        private ToDoListRepository _dailyRepository;
-        public IToDoListRepository Dailies => _dailyRepository = _dailyRepository ?? new ToDoListRepository(_context);
+        private ToDoListRepository _toDoListRepository;
+        public IToDoListRepository ToDoLists => _toDoListRepository = _toDoListRepository ?? new ToDoListRepository(_context);
 
         public UnitOfWork(AppDbContext _appDbContext)
         {
