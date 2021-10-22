@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using ToDoApp.API.DTOs;
 using ToDoApp.Core.Enums;
@@ -36,6 +37,20 @@ namespace ToDoApp.API.Controllers
         {
             var toDoList = await _toDoListService.GetByIdAsync(id);
             return Ok(_mapper.Map<ToDoListDTO>(toDoList));
+        }
+
+        [HttpGet("completed")]
+        public async Task<IActionResult> GetCompleted()
+        {
+            var completed = await _toDoListService.GetAllAsync();
+            return Ok(_mapper.Map<IEnumerable<ToDoListDTO>>(completed.Where(x => x.IsComplete == true).ToList()));
+        }
+
+        [HttpGet("notCompleted")]
+        public async Task<IActionResult> GetNotCompleted()
+        {
+            var completed = await _toDoListService.GetAllAsync();
+            return Ok(_mapper.Map<IEnumerable<ToDoListDTO>>(completed.Where(x => x.IsComplete == false).ToList()));
         }
 
         [HttpPost]

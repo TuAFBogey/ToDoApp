@@ -31,6 +31,11 @@ namespace ToDoApp.Data.Repositories
             return await _DbSet.ToListAsync();
         }
 
+        public async Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate)
+        {
+            return await _DbSet.Where(predicate).ToListAsync();
+        }
+
         public async Task<TEntity> GetByIdAsync(int id)
         {
             return await _DbSet.FindAsync(id);

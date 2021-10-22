@@ -49,5 +49,10 @@ namespace ToDoApp.Service.Services
             _unitOfWork.Commit();
             return updateEntity;
         }
+
+        public async Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate)
+        {
+            return await _repository.Where(predicate);
+        }
     }
 }

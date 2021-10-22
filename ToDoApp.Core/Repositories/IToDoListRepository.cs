@@ -10,4 +10,6 @@ namespace ToDoApp.Core.Repositories
     public interface IToDoListRepository : IRepository<ToDoList>
     {
     }
+
+
 }
