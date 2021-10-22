@@ -53,6 +53,27 @@ namespace ToDoApp.API.Controllers
             return Ok(_mapper.Map<IEnumerable<ToDoListDTO>>(completed.Where(x => x.IsComplete == false).ToList()));
         }
 
+        [HttpGet("daily")]
+        public async Task<IActionResult> GetDaily()
+        {
+            var completed = await _toDoListService.GetAllAsync();
+            return Ok(_mapper.Map<IEnumerable<ToDoListDTO>>(completed.Where(x => x.Period == Period.Daily ).ToList()));
+        }
+
+        [HttpGet("weekly")]
+        public async Task<IActionResult> GetWeekly()
+        {
+            var completed = await _toDoListService.GetAllAsync();
+            return Ok(_mapper.Map<IEnumerable<ToDoListDTO>>(completed.Where(x => x.Period == Period.Weekly).ToList()));
+        }
+
+        [HttpGet("monthly")]
+        public async Task<IActionResult> GetMonthly()
+        {
+            var completed = await _toDoListService.GetAllAsync();
+            return Ok(_mapper.Map<IEnumerable<ToDoListDTO>>(completed.Where(x => x.Period == Period.Monthly).ToList()));
+        }
+
         [HttpPost]
         public async Task<IActionResult> Save(ToDoListDTO toDoListDto)
         {
