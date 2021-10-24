@@ -32,6 +32,7 @@ namespace ToDoApp.API.Controllers
             var toDoLists = await _toDoListService.GetAllAsync();
             return Ok(_mapper.Map<IEnumerable<ToDoListDTO>>(toDoLists));
         }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {

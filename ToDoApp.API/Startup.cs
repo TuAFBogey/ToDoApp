@@ -41,7 +41,7 @@ namespace ToDoApp.API
             services.AddAutoMapper(typeof(Startup));
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddScoped(typeof(IService<>), typeof(Service.Services.Service<>));
+            services.AddScoped(typeof(IService<>), typeof(Service<>));
             services.AddScoped<IToDoListService, ToDoListService>();
             
             services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -59,7 +59,7 @@ namespace ToDoApp.API
             {
                 config.PostProcess = (doc =>
                 {
-                    doc.Info.Title = "New Employee Finder API";
+                    doc.Info.Title = "ToDoApp";
                     doc.Info.Version = "1.0";
                     doc.Info.Contact = new NSwag.OpenApiContact()
                     {
