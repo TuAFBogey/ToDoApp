@@ -48,7 +48,7 @@ namespace ToDoApp.API
 
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer(Configuration["ConnectionStrings:SqlConStr"].ToString(), o =>
+                options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"].ToString(), o =>
                 {
                     o.MigrationsAssembly("ToDoApp.Data");
                 });
