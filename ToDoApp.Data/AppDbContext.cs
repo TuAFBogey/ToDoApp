@@ -16,6 +16,12 @@ namespace ToDoApp.Data
 
         public DbSet<ToDoList> ToDoLists { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder
+                .UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=TodoListDB;Trusted_Connection=True;");
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ToDoListSeed(new int[] { 1, 2, 3, 4, 5, 6, 7, 8}));
