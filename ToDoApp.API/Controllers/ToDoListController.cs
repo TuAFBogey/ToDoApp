@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 using ToDoApp.API.DTOs;
 using ToDoApp.Core.Enums;
@@ -40,30 +38,15 @@ namespace ToDoApp.API.Controllers
             return Ok(_mapper.Map<ToDoDTO>(toDoList));
         }
 
-        [HttpGet("completed")]
-        public async Task<IActionResult> GetCompleted()
+        [HttpGet("IsCompleted")]
+        public async Task<IActionResult> GetCompleted(bool isComplete)
         {
-
-            var toDo = await _toDoService.GetCompletedAsync();
+            var toDo = await _toDoService.GetIsCompleteAsync(isComplete);
             return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(toDo));
-
-            //var completed = await _toDoService.GetAllAsync();
-            //return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(completed.Where(x => x.IsComplete == true).ToList()));
-        }
-
-        [HttpGet("notCompleted")]
-        public async Task<IActionResult> GetNotCompleted()
-        {
-
-            var toDo = await _toDoService.GetNotCompletedAsync();
-            return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(toDo));
-
-            //var completed = await _toDoService.GetAllAsync();
-            //return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(completed.Where(x => x.IsComplete == false).ToList()));
         }
 
         [HttpGet("period")]
-        public async Task<IActionResult> GetDaily(Period period)
+        public async Task<IActionResult> GetPeriod(Period period)
         {
             var toDo = await _toDoService.GetByPeriodAsync(period);
             return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(toDo));

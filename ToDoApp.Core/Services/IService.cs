@@ -14,8 +14,6 @@ namespace ToDoApp.Core.Services
 
         Task<IEnumerable<TEntity>> GetAllAsync();
 
-        Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate);
-
         Task<TEntity> AddAsync(TEntity entity);
 
         void Remove(TEntity entity);

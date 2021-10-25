@@ -9,9 +9,7 @@ namespace ToDoApp.Core.Repositories
 {
     public interface IToDoRepository : IRepository<ToDo>
     {
-        Task<IEnumerable<ToDo>> GetCompletedAsync();
-
-        Task<IEnumerable<ToDo>> GetNotCompletedAsync();
+        Task<IEnumerable<ToDo>> GetIsCompleteAsync(bool isComplete);
 
         Task<IEnumerable<ToDo>> GetByPeriodAsync(Period period);
     }

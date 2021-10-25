@@ -17,14 +17,9 @@ namespace ToDoApp.Data.Repositories
         {
         }
 
-        public async Task<IEnumerable<ToDo>> GetCompletedAsync()
+        public async Task<IEnumerable<ToDo>> GetIsCompleteAsync(bool isComplete)
         {
-            return await _appDbContext.ToDos.ToListAsync();
-        }
-
-        public async Task<IEnumerable<ToDo>> GetNotCompletedAsync()
-        {
-            return await _appDbContext.ToDos.ToListAsync();
+            return await _appDbContext.ToDos.Where(x => x.IsComplete == isComplete).ToListAsync();
         }
 
         public async Task<IEnumerable<ToDo>> GetByPeriodAsync(Period period)

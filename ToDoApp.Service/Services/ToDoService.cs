@@ -17,20 +17,14 @@ namespace ToDoApp.Service.Services
         {
         }
 
+        public async Task<IEnumerable<ToDo>> GetIsCompleteAsync(bool isComplete)
+        {
+            return await _unitOfWork.ToDos.GetIsCompleteAsync(isComplete);
+        }
+
         public async Task<IEnumerable<ToDo>> GetByPeriodAsync(Period period)
         {
             return await _unitOfWork.ToDos.GetByPeriodAsync(period);
-            
-        }
-
-        public async Task<IEnumerable<ToDo>> GetCompletedAsync()
-        {
-            return await _unitOfWork.ToDos.Where(x => x.IsComplete == true);
-        }
-
-        public async Task<IEnumerable<ToDo>> GetNotCompletedAsync()
-        {
-            return await _unitOfWork.ToDos.Where(x => x.IsComplete == false);
         }
     }
 }
