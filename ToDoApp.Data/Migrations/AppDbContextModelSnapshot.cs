@@ -19,94 +19,104 @@ namespace ToDoApp.Data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ToDoApp.Core.Models.ToDoList", b =>
+            modelBuilder.Entity("ToDoApp.Core.Models.ToDo", b =>
                 {
-                    b.Property<int>("ToDoId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("DateTime")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
 
                     b.Property<bool>("IsComplete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Period")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("Daily");
 
-                    b.Property<string>("ToDoName")
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("Id");
 
-                    b.HasKey("ToDoId");
-
-                    b.ToTable("ToDoLists");
+                    b.ToTable("ToDos");
 
                     b.HasData(
                         new
                         {
-                            ToDoId = 1,
+                            Id = 1,
                             DateTime = new DateTime(2021, 10, 24, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             IsComplete = false,
-                            Period = "Monthly",
-                            ToDoName = "Learn SQL"
+                            Name = "Learn SQL",
+                            Period = "Monthly"
                         },
                         new
                         {
-                            ToDoId = 2,
+                            Id = 2,
                             DateTime = new DateTime(2021, 11, 25, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             IsComplete = false,
-                            Period = "Monthly",
-                            ToDoName = "Learn MVC"
+                            Name = "Learn MVC",
+                            Period = "Monthly"
                         },
                         new
                         {
-                            ToDoId = 3,
+                            Id = 3,
                             DateTime = new DateTime(2021, 10, 24, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             IsComplete = false,
-                            Period = "Weekly",
-                            ToDoName = "Write Data Layer"
+                            Name = "Write Data Layer",
+                            Period = "Weekly"
                         },
                         new
                         {
-                            ToDoId = 4,
+                            Id = 4,
                             DateTime = new DateTime(2021, 10, 26, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             IsComplete = true,
-                            Period = "Weekly",
-                            ToDoName = "Develop the ToDoApp"
+                            Name = "Develop the ToDoApp",
+                            Period = "Weekly"
                         },
                         new
                         {
-                            ToDoId = 5,
+                            Id = 5,
                             DateTime = new DateTime(2021, 10, 24, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             IsComplete = true,
-                            Period = "Daily",
-                            ToDoName = "Check the MailBox"
+                            Name = "Check the MailBox",
+                            Period = "Daily"
                         },
                         new
                         {
-                            ToDoId = 6,
+                            Id = 6,
                             DateTime = new DateTime(2021, 10, 28, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             IsComplete = true,
-                            Period = "Daily",
-                            ToDoName = "Something"
+                            Name = "Something",
+                            Period = "Daily"
                         },
                         new
                         {
-                            ToDoId = 7,
+                            Id = 7,
                             DateTime = new DateTime(2021, 10, 30, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             IsComplete = false,
-                            Period = "Weekly",
-                            ToDoName = "BlaBla"
+                            Name = "BlaBla",
+                            Period = "Weekly"
                         },
                         new
                         {
-                            ToDoId = 8,
+                            Id = 8,
                             DateTime = new DateTime(2021, 11, 1, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             IsComplete = true,
-                            Period = "Monthly",
-                            ToDoName = "EtcEtc"
+                            Name = "EtcEtc",
+                            Period = "Monthly"
                         });
                 });
 #pragma warning restore 612, 618

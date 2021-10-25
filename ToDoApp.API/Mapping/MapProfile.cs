@@ -13,8 +13,8 @@ namespace ToDoApp.API.Mapping
     {
         public MapProfile()
         {
-            CreateMap<ToDoList, ToDoListDTO>();
-            CreateMap<ToDoListDTO, ToDoList>();
+            CreateMap<ToDo, ToDoDTO>();
+            CreateMap<ToDoDTO, ToDo>();
         }
     }
 }

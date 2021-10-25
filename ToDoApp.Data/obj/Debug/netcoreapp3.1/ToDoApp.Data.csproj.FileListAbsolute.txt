@@ -1,4 +1,6 @@
 C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\bin\Debug\netcoreapp3.1\ToDoApp.Data.deps.json
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\bin\Debug\netcoreapp3.1\ToDoApp.Data.runtimeconfig.json
+C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\bin\Debug\netcoreapp3.1\ToDoApp.Data.runtimeconfig.dev.json
 C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\bin\Debug\netcoreapp3.1\ToDoApp.Data.dll
 C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\bin\Debug\netcoreapp3.1\ToDoApp.Data.pdb
 C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\bin\Debug\netcoreapp3.1\ToDoApp.Core.dll
@@ -11,6 +13,4 @@ C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\obj\Debug\netcoreapp3.1\ToDoApp.
 C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\obj\Debug\netcoreapp3.1\ToDoApp.Data.csproj.CopyComplete
 C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\obj\Debug\netcoreapp3.1\ToDoApp.Data.dll
 C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\obj\Debug\netcoreapp3.1\ToDoApp.Data.pdb
-C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\bin\Debug\netcoreapp3.1\ToDoApp.Data.runtimeconfig.json
-C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\bin\Debug\netcoreapp3.1\ToDoApp.Data.runtimeconfig.dev.json
 C:\Users\user\source\repos\ToDoApp\ToDoApp.Data\obj\Debug\netcoreapp3.1\ToDoApp.Data.genruntimeconfig.cache

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using ToDoApp.Core.Enums;
 using ToDoApp.Core.Models;
+using ToDoApp.Data.Configurations;
 using ToDoApp.Data.Seeds;
 
 namespace ToDoApp.Data
@@ -14,24 +15,20 @@ namespace ToDoApp.Data
         {
         }
 
-        public DbSet<ToDoList> ToDoLists { get; set; }
+        public DbSet<ToDo> ToDos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=TodoListDB;Trusted_Connection=True;");
+                .UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=TodoDB;Trusted_Connection=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new ToDoListSeed(new int[] { 1, 2, 3, 4, 5, 6, 7, 8}));
+            modelBuilder.ApplyConfiguration(new ToDoConfiguration());
+            modelBuilder.ApplyConfiguration(new ToDoSeed(new int[] { 1, 2, 3, 4, 5, 6, 7, 8}));
 
-            modelBuilder
-                .Entity<ToDoList>()
-                .Property(e => e.Period)
-                .HasConversion(
-                    v => v.ToString(),
-                    v => (Period)Enum.Parse(typeof(Period), v));
+            
 
 
             

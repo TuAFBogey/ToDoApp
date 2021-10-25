@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using ToDoApp.Core.Enums;
 
 namespace ToDoApp.Core.Services
 {
@@ -11,6 +13,16 @@ namespace ToDoApp.Core.Services
         Task<TEntity> GetByIdAsync(int id);
 
         Task<IEnumerable<TEntity>> GetAllAsync();
+
+        Task<IEnumerable<TEntity>> GetCompletedAsync();
+
+        Task<IEnumerable<TEntity>> GetNotCompletedAsync();
+
+        Task<IEnumerable<TEntity>> GetByDailyAsync();
+
+        Task<IEnumerable<TEntity>> GetByWeeklyAsync();
+
+        Task<IEnumerable<TEntity>> GetByMonthlyAsync();
 
         Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate);
 

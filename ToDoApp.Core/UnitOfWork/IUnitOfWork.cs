@@ -8,7 +8,7 @@ namespace ToDoApp.Core.UnitOfWork
 {
     public interface IUnitOfWork
     {
-        IToDoListRepository ToDoLists { get; }
+        IToDoRepository ToDos { get; }
 
         Task CommitAsync();
 

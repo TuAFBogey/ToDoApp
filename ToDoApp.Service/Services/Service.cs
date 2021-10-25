@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using ToDoApp.Core.Enums;
 using ToDoApp.Core.Repositories;
 using ToDoApp.Core.Services;
 using ToDoApp.Core.UnitOfWork;
@@ -31,6 +33,31 @@ namespace ToDoApp.Service.Services
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await _repository.GetAllAsync();
+        }
+
+        public async Task<IEnumerable<TEntity>> GetCompletedAsync()
+        {
+            return (IEnumerable<TEntity>)await _unitOfWork.ToDos.Where(x => x.IsComplete == true);
+        }
+
+        public async Task<IEnumerable<TEntity>> GetNotCompletedAsync()
+        {
+            return (IEnumerable<TEntity>)await _unitOfWork.ToDos.Where(x => x.IsComplete == false);
+        }
+
+        public async Task<IEnumerable<TEntity>> GetByDailyAsync()
+        {
+            return (IEnumerable<TEntity>)await _unitOfWork.ToDos.Where(x => x.Period == Period.Daily);
+        }
+
+        public async Task<IEnumerable<TEntity>> GetByWeeklyAsync()
+        {
+            return (IEnumerable<TEntity>)await _unitOfWork.ToDos.Where(x => x.Period == Period.Weekly);
+        }
+
+        public async Task<IEnumerable<TEntity>> GetByMonthlyAsync()
+        {
+            return (IEnumerable<TEntity>)await _unitOfWork.ToDos.Where(x => x.Period == Period.Monthly);
         }
 
         public async Task<TEntity> GetByIdAsync(int id)

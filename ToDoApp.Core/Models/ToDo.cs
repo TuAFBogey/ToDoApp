@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
 using ToDoApp.Core.Enums;
 
-namespace ToDoApp.API.DTOs
+namespace ToDoApp.Core.Models
 {
-    public class ToDoListDTO
-    {
-        public int ToDoId { get; set; }
-        public string ToDoName { get; set; }
+    public class ToDo
+    { 
+        public int Id { get; set; }
+        public string Name { get; set; }
         public DateTime DateTime { get; set; }
         public bool IsComplete { get; set; }
         public Period Period { get; set; }

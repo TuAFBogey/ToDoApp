@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using ToDoApp.Core.Enums;
 using ToDoApp.Core.Repositories;
 using ToDoApp.Data;
 
@@ -27,6 +28,31 @@ namespace ToDoApp.Data.Repositories
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
+        {
+            return await _DbSet.ToListAsync();
+        }
+
+        public async Task<IEnumerable<TEntity>> GetCompletedAsync()
+        {
+            return await _DbSet.ToListAsync();
+        }
+
+        public async Task<IEnumerable<TEntity>> GetNotCompletedAsync()
+        {
+            return await _DbSet.ToListAsync();
+        }
+
+        public async Task<IEnumerable<TEntity>> GetByDailyAsync()
+        {
+            return await _DbSet.ToListAsync();
+        }
+
+        public async Task<IEnumerable<TEntity>> GetByWeeklyAsync()
+        {
+            return await _DbSet.ToListAsync();
+        }
+
+        public async Task<IEnumerable<TEntity>> GetByMonthlyAsync()
         {
             return await _DbSet.ToListAsync();
         }

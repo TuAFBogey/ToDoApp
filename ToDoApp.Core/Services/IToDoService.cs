@@ -5,11 +5,9 @@ using System.Threading.Tasks;
 using ToDoApp.Core.Enums;
 using ToDoApp.Core.Models;
 
-namespace ToDoApp.Core.Repositories
+namespace ToDoApp.Core.Services
 {
-    public interface IToDoListRepository : IRepository<ToDoList>
+    public interface IToDoService : IService<ToDo>
     {
     }
-
-
 }

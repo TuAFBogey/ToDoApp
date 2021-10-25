@@ -42,7 +42,7 @@ namespace ToDoApp.API
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IService<>), typeof(Service<>));
-            services.AddScoped<IToDoListService, ToDoListService>();
+            services.AddScoped<IToDoService, ToDoService>();
             
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 

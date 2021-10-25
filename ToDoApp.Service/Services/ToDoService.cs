@@ -11,9 +11,9 @@ using ToDoApp.Core.UnitOfWork;
 
 namespace ToDoApp.Service.Services
 {
-    public class ToDoListService : Service<ToDoList>, IToDoListService
+    public class ToDoService : Service<ToDo>, IToDoService
     {
-        public ToDoListService(IUnitOfWork unitOfWork, IRepository<ToDoList> repository) : base(unitOfWork, repository)
+        public ToDoService(IUnitOfWork unitOfWork, IRepository<ToDo> repository) : base(unitOfWork, repository)
         {
         }
 
