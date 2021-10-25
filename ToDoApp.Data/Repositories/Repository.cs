@@ -32,31 +32,6 @@ namespace ToDoApp.Data.Repositories
             return await _DbSet.ToListAsync();
         }
 
-        public async Task<IEnumerable<TEntity>> GetCompletedAsync()
-        {
-            return await _DbSet.ToListAsync();
-        }
-
-        public async Task<IEnumerable<TEntity>> GetNotCompletedAsync()
-        {
-            return await _DbSet.ToListAsync();
-        }
-
-        public async Task<IEnumerable<TEntity>> GetByDailyAsync()
-        {
-            return await _DbSet.ToListAsync();
-        }
-
-        public async Task<IEnumerable<TEntity>> GetByWeeklyAsync()
-        {
-            return await _DbSet.ToListAsync();
-        }
-
-        public async Task<IEnumerable<TEntity>> GetByMonthlyAsync()
-        {
-            return await _DbSet.ToListAsync();
-        }
-
         public async Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate)
         {
             return await _DbSet.Where(predicate).ToListAsync();

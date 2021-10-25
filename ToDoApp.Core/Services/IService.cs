@@ -14,16 +14,6 @@ namespace ToDoApp.Core.Services
 
         Task<IEnumerable<TEntity>> GetAllAsync();
 
-        Task<IEnumerable<TEntity>> GetCompletedAsync();
-
-        Task<IEnumerable<TEntity>> GetNotCompletedAsync();
-
-        Task<IEnumerable<TEntity>> GetByDailyAsync();
-
-        Task<IEnumerable<TEntity>> GetByWeeklyAsync();
-
-        Task<IEnumerable<TEntity>> GetByMonthlyAsync();
-
         Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> predicate);
 
         Task<TEntity> AddAsync(TEntity entity);

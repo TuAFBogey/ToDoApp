@@ -62,34 +62,11 @@ namespace ToDoApp.API.Controllers
             //return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(completed.Where(x => x.IsComplete == false).ToList()));
         }
 
-        [HttpGet("daily")]
-        public async Task<IActionResult> GetDaily()
+        [HttpGet("period")]
+        public async Task<IActionResult> GetDaily(Period period)
         {
-            var toDo = await _toDoService.GetByDailyAsync();
+            var toDo = await _toDoService.GetByPeriodAsync(period);
             return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(toDo));
-            
-            //var completed = await _toDoService.GetAllAsync();
-            //return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(completed.Where(x => x.Period == Period.Daily ).ToList()));
-        }
-
-        [HttpGet("weekly")]
-        public async Task<IActionResult> GetWeekly()
-        {
-            var toDo = await _toDoService.GetByWeeklyAsync();
-            return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(toDo));
-
-            //var completed = await _toDoService.GetAllAsync();
-            //return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(completed.Where(x => x.Period == Period.Weekly).ToList()));
-        }
-
-        [HttpGet("monthly")]
-        public async Task<IActionResult> GetMonthly()
-        {
-            var toDo = await _toDoService.GetByMonthlyAsync();
-            return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(toDo));
-
-            //var completed = await _toDoService.GetAllAsync();
-            //return Ok(_mapper.Map<IEnumerable<ToDoDTO>>(completed.Where(x => x.Period == Period.Monthly).ToList()));
         }
 
         [HttpPost]
