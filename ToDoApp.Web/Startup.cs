@@ -31,6 +31,7 @@ namespace ToDoApp.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
             services.AddAutoMapper(typeof(Startup));
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -49,7 +50,7 @@ namespace ToDoApp.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, AppDbContext context)
         {
             if (env.IsDevelopment())
             {
@@ -66,7 +67,10 @@ namespace ToDoApp.Web
 
             app.UseRouting();
 
+            
             app.UseAuthorization();
+
+            context.Database.Migrate();
 
             app.UseEndpoints(endpoints =>
             {

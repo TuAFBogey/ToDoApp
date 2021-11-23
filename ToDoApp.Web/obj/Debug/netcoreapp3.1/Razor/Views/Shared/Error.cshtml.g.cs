@@ -26,8 +26,15 @@ using ToDoApp.Web.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\source\repos\ToDoApp\ToDoApp.Web\Views\_ViewImports.cshtml"
+using ToDoApp.Web.DTOs;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"516c79d17fc51298b1a29e3de1b6d480170d3fa9", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5fd136eb7d5358e06d7053860cdbc91ae3302419", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

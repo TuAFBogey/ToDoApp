@@ -5821,6 +5821,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
+      "ToDoApp.Core >= 1.0.0",
+      "ToDoApp.Data >= 1.0.0",
       "ToDoApp.Service >= 1.0.0"
     ]
   },
@@ -5851,6 +5853,12 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "D:\\source\\repos\\ToDoApp\\ToDoApp.Core\\ToDoApp.Core.csproj": {
+              "projectPath": "D:\\source\\repos\\ToDoApp\\ToDoApp.Core\\ToDoApp.Core.csproj"
+            },
+            "D:\\source\\repos\\ToDoApp\\ToDoApp.Data\\ToDoApp.Data.csproj": {
+              "projectPath": "D:\\source\\repos\\ToDoApp\\ToDoApp.Data\\ToDoApp.Data.csproj"
+            },
             "D:\\source\\repos\\ToDoApp\\ToDoApp.Service\\ToDoApp.Service.csproj": {
               "projectPath": "D:\\source\\repos\\ToDoApp\\ToDoApp.Service\\ToDoApp.Service.csproj"
             }
