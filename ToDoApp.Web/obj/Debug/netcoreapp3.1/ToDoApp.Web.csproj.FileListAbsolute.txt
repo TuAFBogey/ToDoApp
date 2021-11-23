@@ -85,3 +85,4 @@ D:\source\repos\ToDoApp\ToDoApp.Web\bin\Debug\netcoreapp3.1\ToDoApp.Service.pdb
 D:\source\repos\ToDoApp\ToDoApp.Web\bin\Debug\netcoreapp3.1\ToDoApp.Core.pdb
 D:\source\repos\ToDoApp\ToDoApp.Web\bin\Debug\netcoreapp3.1\ToDoApp.Data.pdb
 D:\source\repos\ToDoApp\ToDoApp.Web\obj\Debug\netcoreapp3.1\Razor\Views\ToDoList\Index.cshtml.g.cs
+D:\source\repos\ToDoApp\ToDoApp.Web\obj\Debug\netcoreapp3.1\Razor\Views\ToDoList\Create.cshtml.g.cs
