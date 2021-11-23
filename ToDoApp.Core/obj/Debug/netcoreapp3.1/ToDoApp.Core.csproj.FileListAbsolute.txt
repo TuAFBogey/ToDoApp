@@ -8,3 +8,13 @@ C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.
 C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.dll
 C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.pdb
 C:\Users\user\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.csproj.AssemblyReference.cache
+D:\source\repos\ToDoApp\ToDoApp.Core\bin\Debug\netcoreapp3.1\ToDoApp.Core.deps.json
+D:\source\repos\ToDoApp\ToDoApp.Core\bin\Debug\netcoreapp3.1\ToDoApp.Core.dll
+D:\source\repos\ToDoApp\ToDoApp.Core\bin\Debug\netcoreapp3.1\ToDoApp.Core.pdb
+D:\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.csproj.AssemblyReference.cache
+D:\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.AssemblyInfoInputs.cache
+D:\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.AssemblyInfo.cs
+D:\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.csproj.CoreCompileInputs.cache
+D:\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.dll
+D:\source\repos\ToDoApp\ToDoApp.Core\obj\Debug\netcoreapp3.1\ToDoApp.Core.pdb

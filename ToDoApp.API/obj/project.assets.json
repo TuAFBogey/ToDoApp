@@ -6490,24 +6490,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Bogey\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\ToDoApp\\ToDoApp.API\\ToDoApp.API.csproj",
+      "projectUniqueName": "D:\\source\\repos\\ToDoApp\\ToDoApp.API\\ToDoApp.API.csproj",
       "projectName": "ToDoApp.API",
-      "projectPath": "C:\\Users\\user\\source\\repos\\ToDoApp\\ToDoApp.API\\ToDoApp.API.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\ToDoApp\\ToDoApp.API\\obj\\",
+      "projectPath": "D:\\source\\repos\\ToDoApp\\ToDoApp.API\\ToDoApp.API.csproj",
+      "packagesPath": "C:\\Users\\Bogey\\.nuget\\packages\\",
+      "outputPath": "D:\\source\\repos\\ToDoApp\\ToDoApp.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Bogey\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6521,14 +6516,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\user\\source\\repos\\ToDoApp\\ToDoApp.Core\\ToDoApp.Core.csproj": {
-              "projectPath": "C:\\Users\\user\\source\\repos\\ToDoApp\\ToDoApp.Core\\ToDoApp.Core.csproj"
+            "D:\\source\\repos\\ToDoApp\\ToDoApp.Core\\ToDoApp.Core.csproj": {
+              "projectPath": "D:\\source\\repos\\ToDoApp\\ToDoApp.Core\\ToDoApp.Core.csproj"
             },
-            "C:\\Users\\user\\source\\repos\\ToDoApp\\ToDoApp.Data\\ToDoApp.Data.csproj": {
-              "projectPath": "C:\\Users\\user\\source\\repos\\ToDoApp\\ToDoApp.Data\\ToDoApp.Data.csproj"
+            "D:\\source\\repos\\ToDoApp\\ToDoApp.Data\\ToDoApp.Data.csproj": {
+              "projectPath": "D:\\source\\repos\\ToDoApp\\ToDoApp.Data\\ToDoApp.Data.csproj"
             },
-            "C:\\Users\\user\\source\\repos\\ToDoApp\\ToDoApp.Service\\ToDoApp.Service.csproj": {
-              "projectPath": "C:\\Users\\user\\source\\repos\\ToDoApp\\ToDoApp.Service\\ToDoApp.Service.csproj"
+            "D:\\source\\repos\\ToDoApp\\ToDoApp.Service\\ToDoApp.Service.csproj": {
+              "projectPath": "D:\\source\\repos\\ToDoApp\\ToDoApp.Service\\ToDoApp.Service.csproj"
             }
           }
         }
@@ -6596,7 +6591,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
