@@ -38,5 +38,24 @@ namespace ToDoApp.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        public async Task<IActionResult> Update(int id)
+        {
+            var toDo = await _toDoService.GetByIdAsync(id);
+            return View(_mapper.Map<ToDoDTO>(toDo));
+        }
+
+        [HttpPost] 
+        public IActionResult Update(ToDoDTO toDoDTO)
+        {
+            _toDoService.Update(_mapper.Map<ToDo>(toDoDTO));
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var toDo = _toDoService.GetByIdAsync(id).Result;
+            _toDoService.Remove(toDo);
+            return RedirectToAction("Index");
+        }
     }
 }
