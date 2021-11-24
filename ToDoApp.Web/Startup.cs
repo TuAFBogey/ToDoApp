@@ -39,6 +39,7 @@ namespace ToDoApp.Web
 
             services.AddMvc();
             services.AddAutoMapper(typeof(Startup));
+            services.AddControllersWithViews();
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IService<>), typeof(Service<>));
