@@ -37,7 +37,7 @@ namespace ToDoApp.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(ToDoDTO toDoDTO)
         {
-            await _toDoService.AddAsync(_mapper.Map<ToDo>(toDoDTO));
+            await _toDoApiService.AddAsync(toDoDTO);
             return RedirectToAction("Index");
         }
 
