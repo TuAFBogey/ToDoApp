@@ -54,10 +54,9 @@ namespace ToDoApp.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var toDo = _toDoService.GetByIdAsync(id).Result;
-            _toDoService.Remove(toDo);
+            await _toDoApiService.Remove(id);
             return RedirectToAction("Index");
         }
     }

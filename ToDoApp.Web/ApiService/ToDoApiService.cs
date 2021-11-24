@@ -23,10 +23,10 @@ namespace ToDoApp.Web.ApiService
             IEnumerable<ToDoDTO> toDoDTOs;
 
             var response = await _httpClient.GetAsync("ToDoList");
-            
+
             if (response.IsSuccessStatusCode)
             {
-                toDoDTOs = JsonConvert.DeserializeObject<IEnumerable<ToDoDTO>>(await 
+                toDoDTOs = JsonConvert.DeserializeObject<IEnumerable<ToDoDTO>>(await
                     response.Content.ReadAsStringAsync());
             }
             else
@@ -80,6 +80,19 @@ namespace ToDoApp.Web.ApiService
                 return true;
             }
             else
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> Remove(int id)
+        {
+            var response = await _httpClient.DeleteAsync($"todolist/{id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                return true;
+            }
             {
                 return false;
             }
