@@ -43,14 +43,14 @@ namespace ToDoApp.Web.Controllers
 
         public async Task<IActionResult> Update(int id)
         {
-            var toDo = await _toDoService.GetByIdAsync(id);
+            var toDo = await _toDoApiService.GetByIdAsync(id);
             return View(_mapper.Map<ToDoDTO>(toDo));
         }
 
-        [HttpPost] 
-        public IActionResult Update(ToDoDTO toDoDTO)
+        [HttpPost]
+        public async Task<IActionResult> Update(ToDoDTO toDoDTO)
         {
-            _toDoService.Update(_mapper.Map<ToDo>(toDoDTO));
+            await _toDoApiService.Update(toDoDTO);
             return RedirectToAction("Index");
         }
 

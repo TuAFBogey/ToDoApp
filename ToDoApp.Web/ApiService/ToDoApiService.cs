@@ -69,6 +69,20 @@ namespace ToDoApp.Web.ApiService
             }
         }
 
+        public async Task<bool> Update(ToDoDTO toDoDTO)
+        {
+            var stringContent = new StringContent(JsonConvert.SerializeObject(toDoDTO), Encoding.UTF8, "application/json");
 
+            var response = await _httpClient.PutAsync("todolist", stringContent);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
