@@ -55,5 +55,20 @@ namespace ToDoApp.Web.ApiService
             }
         }
 
+        public async Task<ToDoDTO> GetByIdAsync(int id)
+        {
+            var response = await _httpClient.GetAsync($"todolist/{id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                return JsonConvert.DeserializeObject<ToDoDTO>(await response.Content.ReadAsStringAsync());
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
     }
 }
