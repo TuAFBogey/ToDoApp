@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -12,10 +11,6 @@ using System.Threading.Tasks;
 using ToDoApp.Core.Repositories;
 using ToDoApp.Core.Services;
 using ToDoApp.Core.UnitOfWork;
-using ToDoApp.Data;
-using ToDoApp.Data.Repositories;
-using ToDoApp.Data.UnitOfWorks;
-using ToDoApp.Service.Services;
 using ToDoApp.Web.ApiService;
 
 namespace ToDoApp.Web
@@ -41,23 +36,11 @@ namespace ToDoApp.Web
             services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
 
-            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddScoped(typeof(IService<>), typeof(Service<>));
-            services.AddScoped<IToDoService, ToDoService>();
-
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-            services.AddDbContext<AppDbContext>(options =>
-            {
-                options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"].ToString(), o =>
-                {
-                    o.MigrationsAssembly("ToDoApp.Data");
-                });
-            });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, AppDbContext context)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -77,7 +60,6 @@ namespace ToDoApp.Web
             
             app.UseAuthorization();
 
-            context.Database.Migrate();
 
             app.UseEndpoints(endpoints =>
             {
