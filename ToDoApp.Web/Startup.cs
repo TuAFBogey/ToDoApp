@@ -16,6 +16,7 @@ using ToDoApp.Data;
 using ToDoApp.Data.Repositories;
 using ToDoApp.Data.UnitOfWorks;
 using ToDoApp.Service.Services;
+using ToDoApp.Web.ApiService;
 
 namespace ToDoApp.Web
 {
@@ -31,6 +32,11 @@ namespace ToDoApp.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpClient<ToDoApiService>(opt =>
+            {
+                opt.BaseAddress = new Uri(Configuration["baseUrl"]);
+            });
+
             services.AddMvc();
             services.AddAutoMapper(typeof(Startup));
 
